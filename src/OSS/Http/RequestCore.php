@@ -754,7 +754,7 @@ class RequestCore
                 if (isset($this->write_stream) || isset($this->write_file)) {
                     curl_setopt($curl_handle, CURLOPT_WRITEFUNCTION, array($this, 'streaming_write_callback'));
                     curl_setopt($curl_handle, CURLOPT_HEADER, false);
-                } else {
+                } elseif (!empty($this->request_body)) {
                     curl_setopt($curl_handle, CURLOPT_POSTFIELDS, $this->request_body);
                 }
                 break;
