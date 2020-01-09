@@ -1,8 +1,10 @@
 ﻿# Alibaba Cloud OSS SDK for PHP
 
-[![Latest Stable Version](https://poser.pugx.org/aliyuncs/oss-sdk-php/v/stable)](https://packagist.org/packages/aliyuncs/oss-sdk-php)
-[![Build Status](https://travis-ci.org/aliyun/aliyun-oss-php-sdk.svg?branch=master)](https://travis-ci.org/aliyun/aliyun-oss-php-sdk)
-[![Coverage Status](https://coveralls.io/repos/github/aliyun/aliyun-oss-php-sdk/badge.svg?branch=master)](https://coveralls.io/github/aliyun/aliyun-oss-php-sdk?branch=master)
+
+(阿里云 OSS SDK Swoole 协程兼容版)
+
+**需要打开 Swoole 的 CURL HOOK，并安装 4.4.15 版本以上的 Swoole**
+
 
 ## [README of Chinese](https://github.com/aliyun/aliyun-oss-php-sdk/blob/master/README-CN.md)
 
