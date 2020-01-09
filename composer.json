@@ -1,6 +1,6 @@
 {
-    "name": "aliyuncs/oss-sdk-php",
-    "description": "Aliyun OSS SDK for PHP",
+    "name": "starfalling/aliyun-oss-php-sdk",
+    "description": "Aliyun OSS SDK for PHP (fork for swoole)",
     "homepage": "http://www.aliyun.com/product/oss/",
     "type": "library",
     "license": "MIT",
