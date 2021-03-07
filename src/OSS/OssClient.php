@@ -2499,6 +2499,9 @@ class OssClient
         if (isset($options[self::OSS_CONTENT_MD5])) {
             $headers[self::OSS_CONTENT_MD5] = $options[self::OSS_CONTENT_MD5];
         }
+        if (isset($options[self::OSS_CONTENT_LENGTH])) {
+            $headers[self::OSS_CONTENT_LENGTH] = $options[self::OSS_CONTENT_LENGTH];
+        }
 
         //Add stsSecurityToken
         if ((!is_null($this->securityToken)) && (!$this->enableStsInUrl)) {
