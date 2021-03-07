@@ -655,7 +655,7 @@ class RequestCore
         curl_setopt($curl_handle, CURLOPT_REFERER, $this->request_url);
         curl_setopt($curl_handle, CURLOPT_USERAGENT, $this->useragent);
         curl_setopt($curl_handle, CURLOPT_HEADERFUNCTION, array($this, 'streaming_header_callback'));
-        curl_setopt($curl_handle, CURLOPT_READFUNCTION, array($this, 'streaming_read_callback'));
+//        curl_setopt($curl_handle, CURLOPT_READFUNCTION, array($this, 'streaming_read_callback'));
 
         // Verification of the SSL cert
         if ($this->ssl_verification) {
@@ -724,6 +724,7 @@ class RequestCore
                     if (!isset($this->read_stream_size) || $this->read_stream_size < 0) {
                         throw new RequestCore_Exception('The stream size for the streaming upload cannot be determined.');
                     }
+                    curl_setopt($curl_handle, CURLOPT_INFILE, $this->read_stream);
                     curl_setopt($curl_handle, CURLOPT_INFILESIZE, $this->read_stream_size);
                     curl_setopt($curl_handle, CURLOPT_UPLOAD, true);
                 } else {
@@ -737,6 +738,7 @@ class RequestCore
                     if (!isset($this->read_stream_size) || $this->read_stream_size < 0) {
                         throw new RequestCore_Exception('The stream size for the streaming upload cannot be determined.');
                     }
+                    curl_setopt($curl_handle, CURLOPT_INFILE, $this->read_stream);
                     curl_setopt($curl_handle, CURLOPT_INFILESIZE, $this->read_stream_size);
                     curl_setopt($curl_handle, CURLOPT_UPLOAD, true);
                 } else {
